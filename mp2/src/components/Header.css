@@ -1,0 +1,36 @@
+nav {
+    background-color: #3b2f26;
+    color: #f4f1ea;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 3px solid #c9bca8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    gap: 2rem;
+}
+nav a {
+    text-decoration: none;
+    color: #f4f1ea;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+nav {
+    background-image: linear-gradient(
+      to bottom,
+      #4b3d33 0%,
+      #3b2f26 60%,
+      #35281f 100%
+    );
+  }
