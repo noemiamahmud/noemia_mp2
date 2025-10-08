@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/noemia_mp2">
+    <BrowserRouter>
     <App />
     </BrowserRouter>
   </React.StrictMode>
