@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {fetchArtworks } from "../api/aic";
 import {Artwork} from "../types/aic";
 import "./GalleryView.css";
@@ -6,7 +7,7 @@ import "./GalleryView.css";
 const GalleryView: React.FC = () => {
     const [items, setItems] = useState<Artwork[]>([]);
     const [artistFilter, setArtistFilter] = useState<string>("");
-
+    const navigate = useNavigate();
     useEffect(() => {
         const load = async () => {
             const p1 = await fetchArtworks(1, 50);
@@ -49,7 +50,7 @@ const GalleryView: React.FC = () => {
     <div
       key={a.id}
       className="gallery__item"
-      onClick={() => (window.location.href = `/detail/${a.id}`)}
+      onClick={() => navigate(`/detail/${a.id}`)}
     >
       {a.image_id ? (
         <>

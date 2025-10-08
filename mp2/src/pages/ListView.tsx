@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import {fetchArtworks } from "../api/aic";
 import {Artwork } from "../types/aic";
+import { Link } from "react-router-dom";
 import "./ListView.css";
 
 type SortKey = "title" | "date_start";
@@ -74,11 +75,11 @@ const ListView: React.FC = () => {
             <ul className="list__results">
                 {filteredAndSorted.map((a) => (
                     <li key={a.id} className="list__item">
-                    <a href={`/detail/${a.id}`} className="list__link">
+                     <Link to={`/detail/${a.id}`} className="list__link">
                         <strong>{a.title}</strong>
                         {a.artist_title && ` - ${a.artist_title}`}
                         {a.date_display && ` - ${a.date_display}`}
-                    </a>
+                    </Link>
                   </li>
                 ))}
             </ul>

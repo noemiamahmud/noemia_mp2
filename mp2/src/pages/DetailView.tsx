@@ -9,7 +9,6 @@ const DetailView: React.FC = () => {
     const navigate = useNavigate();
     const [items, setItems] = useState<Artwork[]>([]);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
-
     useEffect(() => {
         const load = async () => {
             const p1 = await fetchArtworks(1, 50);
