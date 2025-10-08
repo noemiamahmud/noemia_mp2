@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import {fetchArtworks } from "../api/aic";
 import {Artwork } from "../types/aic";
 import "./ListView.css";
-import { queryByLabelText } from "@testing-library/dom";
 
 type SortKey = "title" | "date_start";
 

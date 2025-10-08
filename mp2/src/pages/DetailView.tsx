@@ -3,7 +3,6 @@ import { useParams, useNavigate} from "react-router-dom";
 import { fetchArtworks } from "../api/aic";
 import { Artwork } from "../types/aic";
 import "./DetailView.css";
-import { setSyntheticTrailingComments } from "typescript";
 
 const DetailView: React.FC = () => {
     const { id } = useParams<{ id: string}>();
